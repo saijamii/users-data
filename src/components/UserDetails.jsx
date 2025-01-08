@@ -28,7 +28,7 @@ const UserDetails = ({
     <div style={{ padding: "24px" }}>
       <Title level={3}>{selectedUser?.name} Details</Title>
       <Tabs defaultActiveKey="1">
-        <TabPane tab="Todos" key="1">
+        <TabPane tab={`Todos (${userTodos?.length})`} key="1">
           <Card>
             <List
               dataSource={userTodos}
@@ -58,7 +58,7 @@ const UserDetails = ({
           </Card>
         </TabPane>
 
-        <TabPane tab="Posts" key="2">
+        <TabPane tab={`Posts (${userPosts?.length})`} key="2">
           <Card>
             <List
               dataSource={userPosts}
@@ -71,7 +71,7 @@ const UserDetails = ({
           </Card>
         </TabPane>
 
-        <TabPane tab="Albums" key="3">
+        <TabPane tab={`Albums (${userAlbums?.length})`} key="3">
           <Card>
             <List
               dataSource={userAlbums}
